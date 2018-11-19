@@ -11,7 +11,7 @@
 # Use
 0) transfer some tokens to Sender contract address
 1) Set Your token address via setToken()
-2) Pass two list with address and value in distribute() like this: distribute([address1, address2, address3], [100, 50, 200])
+2) Pass two list with address and value in distribute() like this: distribute([address1, address2, address3], ["500000000000000000", "1000000000000000000", "2000000000000000000"]) big number (token value in hex) should wrap it in double quotes
 
 
 # Additional 
