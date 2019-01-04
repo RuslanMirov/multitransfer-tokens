@@ -15,6 +15,12 @@ contract Sender is Ownable {
       token.transfer(recivers[i], values[i]);
     }
   }
+  
+  function fixAmountDistribute(address[] recivers, uint256 value) onlyOwner() public {
+    for (uint i = 0; i < recivers.length; i ++){
+      token.transfer(recivers[i], value);
+    }
+  }
 
   function getBackTokens(uint256 amount) onlyOwner() public{
     token.transfer(owner, amount);
