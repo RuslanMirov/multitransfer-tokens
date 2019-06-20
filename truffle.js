@@ -14,11 +14,6 @@ module.exports = {
       network_id: '*',
       gas: 6300000,
     },
-    ganache: {
-      host: 'localhost',
-      port: 8545,
-      network_id: '*',
-    },
     ropsten: {
       provider: function() {
         return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/" + infura_apikey)
@@ -41,10 +36,13 @@ module.exports = {
       network_id: 1
     },
   },
-  solc: {
-    optimizer: {
+  compilers: {
+    solc: {
+      version: "0.4.24",  // ex:  "0.4.20". (Default: Truffle's installed solc)
+      optimizer: {
       enabled: true,
       runs: 200
-    }
-  }
+     }
+   }
+ }
 };
